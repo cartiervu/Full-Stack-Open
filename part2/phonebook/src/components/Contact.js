@@ -1,15 +1,13 @@
-const Contact = ({ name }) => {
+const Contact = ({ contact }) => {
     return (
-        <div>
-        {name}
-        </div>
+        <div>{contact.name} {contact.number}</div>
     )
 }
   
 const DisplayContacts = ({ contacts }) => {
     return (
     <div>
-        {contacts.map(contact => <Contact key={contact.name} name={contact.name}/>)}
+        {contacts.map(contact => <Contact key={contact.id} contact={contact}/>)}
     </div>
     )
 }
